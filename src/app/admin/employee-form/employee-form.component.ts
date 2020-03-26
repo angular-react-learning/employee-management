@@ -9,20 +9,19 @@ import { EmployeeService } from "../../employee.service"
 })
 export class EmployeeFormComponent implements OnInit {
 
-  user : {} = {
-      username : "",
-      email : "",
-      phone : ""
+  user: { username: string, email: string, phone: string } = {
+    username: "",
+    email: "",
+    phone: ""
   }
 
-  constructor( private employeeService : EmployeeService ) { }
+  constructor(private employeeService: EmployeeService) { }
 
   ngOnInit(): void {
   }
 
-  addUser()
-    {
-      this.employeeService.addEmployeeData(this.user);
-    }
+  addUser() {
+    this.employeeService.addEmployeeData(this.user);
+  }
 
 }

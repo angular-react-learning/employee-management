@@ -1,3 +1,7 @@
 <div class="employee-list">
-
+    <ul>
+        <li *ngFor="let employee of employees" (click)="showInformation(employee)">
+            {{employee.username}}
+        </li>
+    </ul>
 </div>
