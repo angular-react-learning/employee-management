@@ -13,6 +13,11 @@ export class EmployeeService {
 
   constructor() { }
 
+  getEmployeeList()
+    {
+      return this.list;
+    }
+
   addEmployeeData(user)
     {
       this.list.push({...user})

@@ -3,6 +3,9 @@ import { NgModule } from '@angular/core';
 
 import { FormsModule } from "@angular/forms"
 
+import { RouterModule } from "@angular/router"
+import { routes } from "../routes";  
+
 import { AppComponent } from './app.component';
 import { EmployeeFormComponent } from './admin/employee-form/employee-form.component';
 import { EmployeeListComponent } from './users/employee-list/employee-list.component';
@@ -15,7 +18,8 @@ import { EmployeeListComponent } from './users/employee-list/employee-list.compo
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
