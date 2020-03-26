@@ -1,7 +1,7 @@
 <div class="employee-list">
     <ul>
-        <li *ngFor="let employee of employees" (click)="showInformation(employee)">
-            {{employee.username}}
+        <li *ngFor="let employee of employees">
+            <a routerLink="/employee/{{employee.username}}">{{employee.username}}</a>
         </li>
     </ul>
 </div>

@@ -25,4 +25,11 @@ export class EmployeeService {
       console.log(this.list);
     }
 
+  getEmployeeByName(name)
+      {
+        return this.list.filter((employee)=>{
+          return employee.username === name
+        })[0]
+      }
+
 }

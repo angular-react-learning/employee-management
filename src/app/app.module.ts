@@ -9,12 +9,14 @@ import { routes } from "../routes";
 import { AppComponent } from './app.component';
 import { EmployeeFormComponent } from './admin/employee-form/employee-form.component';
 import { EmployeeListComponent } from './users/employee-list/employee-list.component';
+import { EmployeeDetailComponent } from './employee-detail/employee-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EmployeeFormComponent,
-    EmployeeListComponent
+    EmployeeListComponent,
+    EmployeeDetailComponent
   ],
   imports: [
     BrowserModule,
