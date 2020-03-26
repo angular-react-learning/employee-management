@@ -1,0 +1,20 @@
+<div class="employee-form">
+
+  <form (submit)="addUser()">
+    <p>
+      <label>Username</label>
+      <input type="text" [(ngModel)]="user.username" name="'username'" />
+    </p>
+
+    <p>
+      <label>Email</label>
+      <input type="text" [(ngModel)]="user.email" name="'email'" />
+    </p>
+    <p>
+      <label>Phone</label>
+      <input type="text" [(ngModel)]="user.phone" name="'phone'" />
+    </p>
+    <button type="submit">Add User</button>
+  </form>
+
+</div>
