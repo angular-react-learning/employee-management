@@ -5,7 +5,7 @@
         </li> -->
 
         <li *ngFor="let employee of employees; let i = index" [ngStyle]="styles">
-            <a routerLink="/employee/{{employee.username}}">{{employee.username}}</a>
+            <a routerLink="/employee/{{employee.username}}">{{employee.username}}, {{employee.phone | currency : 'CAD' : 'symbol-narrow' : '4.2-2'}}</a>
         </li>
     </ul>
 </div>

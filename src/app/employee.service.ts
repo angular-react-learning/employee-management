@@ -20,7 +20,7 @@ export class EmployeeService {
 
   addEmployeeData(user)
     {
-      this.list.push({...user})
+      this.list.push({...user, date : new Date()})
       this.employeeList.next(this.list)
       console.log(this.list);
     }
