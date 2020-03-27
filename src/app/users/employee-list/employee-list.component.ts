@@ -12,6 +12,8 @@ export class EmployeeListComponent implements OnInit {
   employees : any[] = [];
   constructor(private employeeService : EmployeeService) { }
 
+  styles = { 'font-size.px' : 18 };
+
   ngOnInit(): void {
 
     this.employees = this.employeeService.getEmployeeList();
@@ -33,4 +35,9 @@ export class EmployeeListComponent implements OnInit {
         return { active : false, odd : index % 2 === 0, even : index % 2 !== 0}
       }
 
+      increaseFont()
+        {
+          this.styles["font-size.px"] = this.styles["font-size.px"] + 1;
+          console.log(this.styles);
+        }
 }
