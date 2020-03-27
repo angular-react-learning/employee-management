@@ -1,0 +1,25 @@
+<table>
+    <tr>
+        <th>Country</th>
+        <th>Province</th>
+        <th>Confirmed</th>
+        <th>Deaths</th>
+        <th>Recovered</th>
+    </tr>
+    <tr *ngFor="let country of counteries">
+        <td>{{country.country}}</td>
+        <td>{{country.province}}</td>
+        <td>{{country.stats.confirmed}}</td>
+        <td>{{country.stats.deaths}}</td>
+        <td>{{country.stats.recovered}}</td>
+    </tr>
+</table>
+
+<div class="chart">
+    <canvas baseChart
+      [data]="pieChartData"
+      [labels]="pieChartLabels"
+      [chartType]="pieChartType"
+      [legend]="false">
+    </canvas>
+  </div>
