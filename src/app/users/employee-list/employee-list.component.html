@@ -1,6 +1,6 @@
 <div class="employee-list">
     <ul>
-        <li *ngFor="let employee of employees">
+        <li *ngFor="let employee of employees; let i = index" [ngClass]="getClasses(i)">
             <a routerLink="/employee/{{employee.username}}">{{employee.username}}</a>
         </li>
     </ul>

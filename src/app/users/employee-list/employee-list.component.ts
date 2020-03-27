@@ -28,4 +28,9 @@ export class EmployeeListComponent implements OnInit {
       alert(`Email : ${employee.email} Phone : ${employee.phone} `)
     }
 
+    getClasses(index)
+      {
+        return { active : false, odd : index % 2 === 0, even : index % 2 !== 0}
+      }
+
 }

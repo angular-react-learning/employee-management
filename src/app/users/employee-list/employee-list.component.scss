@@ -1,4 +1,16 @@
 .employee-list {
   border : 1px solid green;
-  padding : 10px
+  padding : 10px;
+
+  .active {
+    background-color : yellow
+  }
+
+  .odd {
+    background-color : white
+  }
+
+  .even {
+    background-color : grey
+  }
 }
