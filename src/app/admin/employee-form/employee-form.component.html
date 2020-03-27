@@ -1,20 +1,22 @@
 <div class="employee-form">
 
-  <form (submit)="addUser()">
+  <form #employee="ngForm" novalidate (ngSubmit)="addUser(employee)">
     <p>
       <label>Username</label>
-      <input type="text" [(ngModel)]="user.username" name="'username'" />
+      <input type="text" ngModel #username name="'username'" required />
     </p>
-
     <p>
       <label>Email</label>
-      <input type="text" [(ngModel)]="user.email" name="'email'" />
+      <input type="email" ngModel #email name="'email'" />
     </p>
     <p>
       <label>Phone</label>
-      <input type="text" [(ngModel)]="user.phone" name="'phone'" />
+      <input type="text" ngModel #phone name="'phone'" />
     </p>
     <button type="submit">Add User</button>
   </form>
+
+  <p>Username is: {{ username.value }}</p>
+  <p>Username is valid : {{ username.valid }}</p>
 
 </div>

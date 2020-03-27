@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
 import { EmployeeService } from "../../employee.service"
+
+import { NgForm } from "@angular/forms";
 
 @Component({
   selector: 'emp-employee-form',
@@ -20,8 +21,9 @@ export class EmployeeFormComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  addUser() {
-    this.employeeService.addEmployeeData(this.user);
+  addUser(form) {
+    console.log(form);
+    // this.employeeService.addEmployeeData(this.user);
   }
 
 }
