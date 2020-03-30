@@ -1,3 +1,9 @@
+
+
+<!-- <input type="text" [(ngModel)]="number" /> -->
+{{ number | async }}
+
+<input [(ngModel)]="searchText" type="text" />
 <table>
     <tr>
         <th>Country</th>
@@ -6,8 +12,8 @@
         <th>Deaths</th>
         <th>Recovered</th>
     </tr>
-    <tr *ngFor="let country of counteries">
-        <td>{{country.country}}</td>
+    <tr *ngFor="let country of counteries | search : searchText">
+        <td>{{country.country | uppercase}}</td>
         <td>{{country.province}}</td>
         <td>{{country.stats.confirmed}}</td>
         <td>{{country.stats.deaths}}</td>

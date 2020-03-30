@@ -14,6 +14,7 @@ import { EmployeeListComponent } from './users/employee-list/employee-list.compo
 import { EmployeeDetailComponent } from './employee-detail/employee-detail.component';
 import { InfoComponent } from './info/info.component';
 import { ChartsModule } from 'ng2-charts';
+import { SearchPipe } from './search.pipe';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { ChartsModule } from 'ng2-charts';
     EmployeeFormComponent,
     EmployeeListComponent,
     EmployeeDetailComponent,
-    InfoComponent
+    InfoComponent,
+    SearchPipe
   ],
   imports: [
     BrowserModule,
