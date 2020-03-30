@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ChartType, ChartOptions } from 'chart.js';
 import { Label } from 'ng2-charts';
-import { HttpClient } from "@angular/common/http"
 import { Observable } from "rxjs";
+
+import { CovidService } from "../covid.service"
 
 @Component({
   selector: 'emp-info',
@@ -11,16 +12,16 @@ import { Observable } from "rxjs";
 })
 export class InfoComponent implements OnInit {
 
-  counteries : any = [];
+  counteries: any = [];
 
-  constructor(private httpClient : HttpClient) { }
+  constructor(private covidService : CovidService) { }
 
   public pieChartLabels: Label[] = ["US", "China", "India"];
   public pieChartData: number[] = [300, 500, 100];
   public pieChartType: ChartType = 'pie';
 
 
-  observeNumber : Observable<number>;
+  observeNumber: Promise<number>;
 
   ngOnInit(): void {
 
@@ -32,20 +33,26 @@ export class InfoComponent implements OnInit {
         }, 1000)
     })
 
+    // this.observeNumber = new Promise((resolve) => {
+    //   resolve(42342432483890238423);
+    // })
 
-    this.httpClient.get("https://corona.lmao.ninja/v2/jhucsse").subscribe((data : [])=>{      
-      
-      this.counteries = data;
 
-      this.pieChartLabels = data.map((item : any)=>{
-        return `${item.province}, ${item.country}`;
+    
+      this.covidService.getCases()
+      .subscribe((data: []) => {
+
+        this.counteries = data;
+
+        this.pieChartLabels = data.map((item: any) => {
+          return `${item.province}, ${item.country}`;
+        })
+
+        this.pieChartData = data.map((item: any) => {
+          return item.stats.confirmed;
+        })
+
       })
-
-      this.pieChartData = data.map((item : any)=>{
-        return item.stats.confirmed;
-      })
-
-    })
   }
 
 }
