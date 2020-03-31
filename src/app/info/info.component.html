@@ -2,7 +2,7 @@
 
 <!-- MomentJS Pipe -->
 
-Moment formatted date "{{ createdOn | moment}}"
+Moment formatted date "{{ createdOn | moment : 'DD MM YYYY'}}"
 
 
 <!-- <input type="text" [(ngModel)]="number" />
@@ -24,7 +24,7 @@ Moment formatted date "{{ createdOn | moment}}"
     </tr>
     <!-- <tr *ngFor="let country of counteries | search : searchText"> -->
     <tr *ngFor="let country of counteries">
-        <td>{{country.country | uppercase}}</td>
+        <td (click)="showMessage(country.country)">{{country.country | uppercase}}</td>
         <td>{{country.province}}</td>
         <td>{{country.stats.confirmed}}</td>
         <td>{{country.stats.deaths}}</td>

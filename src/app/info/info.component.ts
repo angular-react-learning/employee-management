@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ChartType, ChartOptions } from 'chart.js';
 import { Label } from 'ng2-charts';
+
 import { Observable } from "rxjs";
 
 import { CovidService } from "../covid.service"
@@ -24,6 +25,11 @@ export class InfoComponent implements OnInit {
 
 
   observeNumber: Promise<number>;
+
+  showMessage(message)
+    {
+      alert(message);
+    }
 
   ngOnInit(): void {
 
