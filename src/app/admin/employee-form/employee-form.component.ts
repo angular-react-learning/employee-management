@@ -10,6 +10,8 @@ import { NgForm } from "@angular/forms";
 })
 export class EmployeeFormComponent implements OnInit {
 
+  employee : NgForm;
+
   user: { username: string, email: string, phone: string } = {
     username: "",
     email: "",
