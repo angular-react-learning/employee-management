@@ -1,11 +1,16 @@
 
 
-<!-- <input type="text" [(ngModel)]="number" /> -->
-{{ observeNumber | async }}
+<!-- MomentJS Pipe -->
 
-<div alert="Hello World!!!">
+Moment formatted date "{{ createdOn | moment}}"
+
+
+<!-- <input type="text" [(ngModel)]="number" />
+{{ observeNumber | async }} -->
+
+<!-- <div alert="Hello World!!!">
     this is the alert hello world!!!
-</div>
+</div> -->
 
 <input [(ngModel)]="searchText" type="text" />
 <table>
@@ -15,13 +20,16 @@
         <th>Confirmed</th>
         <th>Deaths</th>
         <th>Recovered</th>
+        <th>Updated At</th>
     </tr>
-    <tr *ngFor="let country of counteries | search : searchText">
+    <!-- <tr *ngFor="let country of counteries | search : searchText"> -->
+    <tr *ngFor="let country of counteries">
         <td>{{country.country | uppercase}}</td>
         <td>{{country.province}}</td>
         <td>{{country.stats.confirmed}}</td>
         <td>{{country.stats.deaths}}</td>
         <td>{{country.stats.recovered}}</td>
+        <td>{{country.updatedAt | moment}}</td>
     </tr>
 </table>
 

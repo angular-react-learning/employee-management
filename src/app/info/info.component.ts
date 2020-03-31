@@ -14,6 +14,8 @@ export class InfoComponent implements OnInit {
 
   counteries: any = [];
 
+  createdOn : String = new Date().toISOString()
+
   constructor(private covidService : CovidService) { }
 
   public pieChartLabels: Label[] = ["US", "China", "India"];

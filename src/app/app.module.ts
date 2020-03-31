@@ -16,6 +16,7 @@ import { InfoComponent } from './info/info.component';
 import { ChartsModule } from 'ng2-charts';
 import { SearchPipe } from './search.pipe';
 import { AlertDirective } from './alert.directive';
+import { MomentPipe } from './moment.pipe';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { AlertDirective } from './alert.directive';
     EmployeeDetailComponent,
     InfoComponent,
     SearchPipe,
-    AlertDirective
+    AlertDirective,
+    MomentPipe
   ],
   imports: [
     BrowserModule,
