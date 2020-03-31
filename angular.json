@@ -33,6 +33,16 @@
             "scripts": []
           },
           "configurations": {
+
+            "fr" : {
+              "aot" : true,
+              "outputPath": "dist/fr",
+              "i18nFile": "src/locale/messages.fr.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "de",
+              "i18nMissingTranslation": "error"
+            },
+
             "production": {
               "fileReplacements": [
                 {
@@ -71,6 +81,9 @@
           "configurations": {
             "production": {
               "browserTarget": "employee-management:build:production"
+            },
+            "fr" : {
+              "browserTarget": "employee-management:build:fr"
             }
           }
         },

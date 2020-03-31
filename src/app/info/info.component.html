@@ -1,5 +1,9 @@
 
 
+
+
+
+
 <!-- MomentJS Pipe -->
 
 Moment formatted date "{{ createdOn | moment : 'DD MM YYYY'}}"
@@ -15,18 +19,18 @@ Moment formatted date "{{ createdOn | moment : 'DD MM YYYY'}}"
 <input [(ngModel)]="searchText" type="text" />
 <table>
     <tr>
-        <th>Country</th>
-        <th>Province</th>
-        <th>Confirmed</th>
-        <th>Deaths</th>
-        <th>Recovered</th>
-        <th>Updated At</th>
+        <th i18n>Country</th>
+        <th i18n>Province</th>
+        <th i18n>Confirmed</th>
+        <th i18n>Deaths</th>
+        <th i18n>Recovered</th>
+        <th i18n>Updated At</th>
     </tr>
     <!-- <tr *ngFor="let country of counteries | search : searchText"> -->
     <tr *ngFor="let country of counteries">
         <td (click)="showMessage(country.country)">{{country.country | uppercase}}</td>
         <td>{{country.province}}</td>
-        <td>{{country.stats.confirmed}}</td>
+        <td>{{country.stats.confirmed | number}}</td>
         <td>{{country.stats.deaths}}</td>
         <td>{{country.stats.recovered}}</td>
         <td>{{country.updatedAt | moment}}</td>

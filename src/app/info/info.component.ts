@@ -17,6 +17,8 @@ export class InfoComponent implements OnInit {
 
   createdOn : String = new Date().toISOString()
 
+  searchText : string = "";
+
   constructor(private covidService : CovidService) { }
 
   public pieChartLabels: Label[] = ["US", "China", "India"];

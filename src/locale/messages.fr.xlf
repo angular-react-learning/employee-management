@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="a43f25a9ac40e8e2441ff0be7a36b8e5d15534df" datatype="html">
+        <source>Country</source>
+        <target>Pays</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/info/info.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="37bd3c41557647986477360e6731007723e2e731" datatype="html">
+        <source>Province</source>
+        <target>Province</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/info/info.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a1daf43d26259bffdd5eb2d405c61583540b113b" datatype="html">
+        <source>Confirmed</source>
+        <target>Confirmé</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/info/info.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9e8f57f4fb146ef563bd719293437c2c45f581d8" datatype="html">
+        <source>Deaths</source>
+        <target>Des morts</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/info/info.component.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7483940736baf5be5eb713f7c12bd32523317a74" datatype="html">
+        <source>Recovered</source>
+        <target>Rétablie</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/info/info.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="88e3c6c4c5fd7d30bfa2a9a8c2f9f2d56ee639a4" datatype="html">
+        <source>Updated At</source>
+        <target>Mis à jour à</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/info/info.component.html</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
