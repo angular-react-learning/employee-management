@@ -3,7 +3,7 @@
   <form #employee="ngForm" novalidate (ngSubmit)="addUser(employee)">
     <p>
       <label>Username</label>
-      <input type="text" ngModel #username="ngModel" name="'username'" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$" />
+      <input type="text" ngModel #username="ngModel" name="'username'"  required />
       <span *ngIf="username.invalid && username.dirty">This is a email</span>
     </p>
     <p>

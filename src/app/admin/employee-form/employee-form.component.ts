@@ -23,9 +23,10 @@ export class EmployeeFormComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  addUser(form) {
-    console.log(form);
-    // this.employeeService.addEmployeeData(this.user);
+  addUser(form : NgForm) {
+      this.employeeService.addEmployeeData(form.value).subscribe(()=>{
+        console.log("asdasd")
+      })
   }
 
 }

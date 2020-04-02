@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-
+import { HttpClient } from "@angular/common/http"
 import { Subject, Observable } from "rxjs" 
 
 @Injectable({
@@ -11,7 +11,7 @@ export class EmployeeService {
 
   private list : any[] = [];
 
-  constructor() { }
+  constructor(private httpClient : HttpClient) { }
 
   getEmployeeList()
     {
@@ -20,9 +20,10 @@ export class EmployeeService {
 
   addEmployeeData(user)
     {
-      this.list.push({...user, date : new Date()})
-      this.employeeList.next(this.list)
-      console.log(this.list);
+      return this.httpClient.post("http://localhost:3000/users", user);
+      // this.list.push({...user, date : new Date()})
+      // this.employeeList.next(this.list)
+      // console.log(this.list);
     }
 
   getEmployeeByName(name)
